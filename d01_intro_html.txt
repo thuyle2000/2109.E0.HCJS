@@ -1,0 +1,28 @@
+HCJS (HTML - CSS - Javascript)
+=============================
+
+Tool: VSCODE /
+webserver: virtual host: Live Server -plugin cua VSCODE / Github
+Tai lieu : kho hoc lieu ggl-drive
+
+
+1/HTML: hyper text markup language
+- 1 trang web (web page) la 1 ho so HTML bao gom nhieu thanh phan.
+- Moi thanh phan (element) bao gom the mo, noi dung va the dong. 
+  The dat ben trong <>, the dong trung ten the mo, nhung co them dau / o dau
+  Ten the ko phan biet chu thuong va hoa.
+
+2/ Trang web html5 phai duoc khai bao o dong dau tien la : <!DOCTYPE html>
+
+3/ Cac thanh phan co ban (basic element) cua 1 trang web:
+- HTML : element lon nhat, chua cac element khac
+- HEAD : cung cap thong tin co ban ve trang web
+    - TITLE: mo ta tieu de van tat cua trang 
+    - META : cung cap thong tin ve du lieu trong trang web.
+    - LINK : lien ket trang web voi cac tap tin khac, vd CSS
+    - SCRIPT : lien ket trang web voi cac tap tin javascript 
+- BODY : chua toan bo noi dung trang web duoc trinh bay tren man hinh trinh duyet.
+
+Website tham khao :https://www.w3schools.com/html/
+
+
