@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class</title>
+    <style>
+
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p {
+            display: none;
+            padding: 20px;
+        }
+
+        p img {
+            border: solid tan medium;
+            padding: 1rem;
+        }
+
+        div:hover p {
+            display: block;
+        }
+
+        p:first-child {
+            color: blue;
+        }
+
+        div::first-letter{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Pseudo class Demo</h2>
+    <hr>
+    <div>Hover over this div element to show the p element
+        <p> Hi, baby ! <br>
+            <img src="images/baby.jpg" alt="">
+        </p>
+        <p>
+            I'm Sar Lavi ...
+        </p>
+    </div>
+</body>
+
+</html>

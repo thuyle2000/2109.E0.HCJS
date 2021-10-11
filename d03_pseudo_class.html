@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class</title>
+
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a.highlight:hover {
+            color: #ff0000;
+            font-size: 22px;
+        }
+
+        div {
+            background-color: green;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        div:hover {
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Pseudo-classes and HTML Classes</h2>
+    <hr>
+
+    <p>When you hover over the first link below, it will change color and font size:</p>
+
+    <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+
+    <p><a href="default.asp">CSS Tutorial</a></p>
+
+    <p>Mouse over the div element below to change its background color:</p>
+
+    <div>Mouse Over Me</div>
+
+</body>
+
+</html>
