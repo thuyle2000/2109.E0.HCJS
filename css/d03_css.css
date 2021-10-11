@@ -1,0 +1,18 @@
+p>a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+p>a:link, 
+p>a:visited {
+    background-color: teal!important;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block !important;
+    
+  }
+  
+  p>a:hover, p>a:active {
+    background-color: red !important; 
+  }

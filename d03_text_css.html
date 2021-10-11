@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-style</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <link rel="stylesheet" href="css/d03_css.css">
+    <style>
+        body {
+            font-family: "Sofia", sans-serif;
+        }
+
+        div {
+            border: 1px solid black;
+            padding: 1.5rem;
+            width: 300px;
+            height: 200px;
+        }
+
+        .center {
+            text-align: center;
+            color: green;
+        }
+
+        .right {
+            text-align: right;
+            background-color: lightgoldenrodyellow;
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .justify {
+            text-align: justify;
+            color: lavenderblush;
+            background-color: lightcoral;
+        }
+
+        h2 {
+            text-shadow: gray -3px -3px 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Text Style CSS Demo</h2>
+    <hr>
+    <p>
+        <a href="d03_link_css.html">home style</a>
+        <a href="d03_text_css.html">text style</a>
+        <a href="d03_pseudo_class.html">pseudo-class</a>
+        <a href="d03_pseudo_class2.html">pseudo-class-2</a>
+        <a href="d03_indent_css.html">indent style</a>
+        <a href="d03_border_css.html">border style</a>
+    </p>
+
+    <h3>Example text-align/ font/ color</h3>
+
+    <div>
+        In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind
+        ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this
+        world haven't had the advantages that you've had.'
+    </div>
+
+    <div class="justify">
+        In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind
+        ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this
+        world haven't had the advantages that you've had.'
+    </div>
+
+    <div class="right">
+        In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind
+        ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this
+        world haven't had the advantages that you've had.'
+    </div>
+
+    <div class="center">
+        In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind
+        ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this
+        world haven't had the advantages that you've had.'
+    </div>
+
+
+
+
+</body>
+
+</html>
