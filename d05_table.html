@@ -12,15 +12,24 @@
             margin-left: 1rem;
             border: solid brown thin;
             padding: 0.5rem;
+            width: 50%;
         }
         .bangDS td, .bangDS th{
             border: burlywood solid thin;
-            padding: 0.2rem 0.5rem;
+            padding: 0.2rem 1rem;
         }
 
         .bangDS td:nth-child(2){
             text-align: center;
         }
+
+        .bangDS caption{
+            color: lightyellow;
+            background-color: lightseagreen;
+            padding: 0.5rem;
+            font-size: 120%;
+        }
+
     </style>
 
 
@@ -30,6 +39,7 @@
     <hr>
     
     <table border="1">
+        <caption>Danh sach Lop</caption>
         <tr>
             <th>Ho ten</th>
             <th>Nam sinh</th>
@@ -54,15 +64,16 @@
 
 
     <table class="bangDS">
+        <caption>Danh sach Lop</caption>
         <tr>
             <th>Ho ten </th>
             <th>Nam Sinh </th>
             <th>Email</th>
         </tr>
-        <tr>
-            <td>Sar Lavi</td>
-            <td>2003</td>
-            <td>lavi@fpt.edu.vn</td>
+        <tr style="height: 4rem;">
+            <td style="vertical-align: top;">Sar Lavi</td>
+            <td style="vertical-align: middle;">2003</td>
+            <td style="vertical-align: bottom;">lavi@fpt.edu.vn</td>
         </tr>
         <tr>
             <td>Bich Tram</td>
