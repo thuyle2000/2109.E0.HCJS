@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        div.d0 {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 25px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+        div.d0:hover {
+            background-color: pink;
+        }
+
+
+        div.d1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: background-color 3s;
+        }
+
+        div.d1:hover {
+            background-color:red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h2>Transition Effect Demo</h2>
+    <hr>
+    <div class="d0"></div>
+    <div class="d1"></div>
+</body>
+
+</html>
