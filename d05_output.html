@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+</head>
+
+<body>
+    <h2>Output demo</h2>
+    <hr>
+
+    <form action="d05_menu.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+
+
+    <br><br> 
+    <form action="d05_menu.html" oninput="tong.value=parseInt(sp.value)*parseInt(soluong.value)">
+        <div>
+            <label for="">
+                San pham : 
+            </label>
+            <select name="sp" id="sp">
+                <option value="100">banh snack</option>
+                <option value="300">choclate</option>
+                <option value="150">pepsi</option>
+                <option value="120">7up</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">So luong : </label>
+            <input type="number" id="soluong" name="soluong" value="1" min="1" max="1000">
+        </div>
+
+        <div>
+            <label for="">Thanh tien : </label>
+            <output name="tong"></output>
+        <br><br>
+        </div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+</body>
+
+</html>
