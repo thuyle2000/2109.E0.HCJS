@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parseInt</title>
+</head>
+<body>
+    <h2>parseInt() Demo</h2>
+    <hr>
+
+    <input type="number" name="n1" id="n1" value="100" min="0" max="1000"> <br> <br>
+    <input type="number" name="n2" id="n2" value="50" min="0" max="1000"> <br> <br>
+    <input type="button" value="Add" id="btnAdd"> <br><br>
+    <input type="number" name="result" id="result" readonly>
+
+    <script>
+        //neu user click vo nut Add, co id=btnAdd
+        document.getElementById("btnAdd").onclick= function(){
+            var x = parseInt(document.getElementById("n1").value);
+            var y = parseInt(document.getElementById("n2").value);
+
+            document.getElementById("result").value = x + y;         
+        }
+    </script>
+
+</body>
+</html>
