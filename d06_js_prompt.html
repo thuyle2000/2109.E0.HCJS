@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+<body>
+    <h2>prompt() demo</h2>
+    <hr>
+    <input type="button" value="Click Me" id="btnMe">
+    <p id="demo"> </p>
+
+    <script>
+        document.getElementById("btnMe").onclick=function(){
+            var r = prompt("What your name ? ", "La Bao Minh");
+            if(r !=null){
+                document.getElementById("demo").innerHTML="Hi, "+r+". How do u do today? ";
+            }
+            else{
+                document.getElementById("demo").innerHTML="Nothing to do !";
+            }
+
+        }
+    </script>
+</body>
+</html>
