@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse-over</title>
+    <style>
+        #hinh{
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mouse Over Demo</h2>
+    <hr>
+    <img src="images/christ3b.PNG" alt="" id="hinh">
+
+    <script>
+        document.getElementById("hinh").onmouseover=function(){
+            document.getElementById("hinh").src="images/christ4b.PNG";
+        }
+
+        document.getElementById("hinh").onmouseout=function(){
+            document.getElementById("hinh").src="images/christ3b.PNG";
+        }
+    </script>
+</body>
+</html>
