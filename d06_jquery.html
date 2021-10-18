@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Demo</h2>
+    <hr>
+    <input type="button" value="Click Me" id="btnMe">
+    <p id="p1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo vitae omnis quis quam labore doloremque quas,
+        possimus totam ratione dicta praesentium, veniam vel. Cupiditate blanditiis corporis ex odio placeat cumque?
+    </p>
+
+    <script>
+        $(document).ready(
+            function () {
+                $("#btnMe").click(
+                    function () {
+                        $("#p1").toggle();
+                    }
+                );
+            }
+        );
+    </script>
+</body>
+
+</html>
