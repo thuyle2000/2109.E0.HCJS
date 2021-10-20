@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+
+<body>
+    <h2>Array Demo</h2>
+    <hr>
+    <input type="text" name="search" id="search" placeholder="nhap ten sv muon tim">
+    <input type="button" value="Search" id="btnOK">
+    <br><br>
+    <textarea name="result" id="result" cols="30" rows="4" readonly></textarea>
+
+    <script>
+        let ds=["nguyen toan", "sar lavi", "la bao minh", "nguyen thi bich tram","nguyen trong thuat","nguyen anh khoa","nguyen phuc duy"];
+
+        document.getElementById("btnOK").onclick=function(){
+            var ten = document.getElementById("search").value;
+
+            var re = new RegExp(ten,"gi");
+
+            var s =[]; //mang chua ds sinh vien tim thay
+            for (let i = 0; i < ds.length; i++) {           
+                if(re.test(ds[i])){
+                    s.push(ds[i]);  //dua ten sv tim thay vo cuoi mang ket qua s
+                }
+            }
+
+            if(s.length == 0){
+                s.push("Ko tim thay !!!");
+            }
+
+            document.getElementById("result").value = s.join("\n");
+
+        }
+    </script>
+</body>
+
+</html>
