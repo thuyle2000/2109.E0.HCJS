@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator</title>
+</head>
+<body>
+    <h2>Operator Demo</h2>
+    <hr>
+    <script>
+        var x1=100;    //x1 la kieu number -int
+        var x2="100";  //x2 la kieu string
+        var x3=100;    //x3 la kieu number -int
+
+        document.write("<pre>");
+        document.writeln("<h2>Phep toan so sanh </h2>");
+        document.writeln(`${x1} == "${x2}" => ` + (x1==x2));
+        document.writeln(`${x1} === "${x2}" => ` + (x1===x2));
+
+        document.writeln(`${x1} == ${x3} => ` + (x1==x3));
+        document.writeln(`${x1} === ${x3} => ` + (x1===x3));
+
+        var y1= true;
+        var y2= false;
+        var y3= true;
+        document.write("<h2>Phep toan luan ly (logical) </h2>");
+        document.writeln(`${y1} and ${y2} => ` + (y1 && y2));
+        document.writeln(`${y1} and ${y3} => ` + (y1 && y3));
+        document.writeln(`${y1} or ${y2} => ` + (y1 || y2));
+        document.writeln(`${y1} or ${y3} => ` + (y1 || y3));
+
+        var z1= 25;
+        var z2= 44;
+        var z3= 3;
+        document.write("<h2>Phep toan luan ly nhi phan (bitwise logical) </h2>");
+        document.writeln(`${z1} and ${z2} => ` + (z1 & z2));
+        document.writeln(`${z1} or ${z2} => ` + (z1 | z2));
+        document.writeln(`${z1} xor ${z2} => ` + (z1 ^ z2));
+        document.writeln(`${z1} >> ${z3} => ` + (z1 >> z3));
+        document.writeln(`${z1} << ${z3} => ` + (z1 << z3));
+
+
+        var w='hello';
+        document.write("<h2>Kieu du lieu </h2>");   
+        document.writeln(`${x1}  => ` + typeof(x1));     
+        document.writeln(`${y1}  => ` + typeof(y1));         
+        document.writeln(`${w}  => ` + typeof(w)); 
+
+        document.write("</pre>");
+    </script>
+</body>
+</html>
