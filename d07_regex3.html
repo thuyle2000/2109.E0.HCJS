@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+<body>
+    <h2>Regular Expression Demo</h2>
+    <hr>
+    <input type="text" name="search" id="search" placeholder="nhap chuoi bat ky (6 ky tu)"> <br><br>
+    <input type="button" value="OK" id="btnOK">
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("btnOK").onclick= function(){
+            var data = document.getElementById("search").value;
+            if(data.length!=6){
+                alert("Do dai chuoi ko hop le !!!");
+            }
+            else{
+                //kiem tra chuoi data co phai la chuoi doi xung hay ko
+
+                // var re = /(\w)(\w)(\w)\3\2\1/; 
+                var re = new RegExp("(\\w)(\\w)(\\w)\\3\\2\\1");
+
+                if(re.test(data)){
+                    alert(`${data} la chuoi doi xung ! `);
+                }
+                else{
+                    alert(`${data} khong phai la chuoi doi xung ! `);
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
