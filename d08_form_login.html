@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <h2>Form Demo - DOM</h2>
+    <hr>
+    <h3>Login</h3>
+
+    <!-- the form : tao mau bieu nhap lieu tren trang web -->
+    <!-- action : chua ten trang dc xu ly/hien thi sau khi bam nut submit -->
+    <form action="d05_menu.html" id="form_login" name="form_login" method="get">
+        <p>
+            Username: <input type="text" name="user" id="user" value="aptech">
+        </p>
+        <p>
+            Password: <input type="password" name="pass" id="pass" value="123">
+        </p>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        //ma kich ban duoc thuc hien khi bam nut submit tren form login
+        document.getElementById("form_login").onsubmit = function () {
+
+            //lay gia tri nhap trong o user cat vo bien [tenTK]
+            // var tenTK = document.getElementById("user").value;
+            var tenTK = form_login.user.value;
+
+            // var matkhau = document.getElementById("pass").value;
+            var matkhau = form_login.pass.value;
+
+            if (tenTK != "aptech" || matkhau != "123") {
+                alert("Tai khoan dang nhap hoac mat khau khong hop le. Vui long nhap lai !");
+
+                //    document.getElementById("user").focus(); //set cursor ve o nhap user
+                form_login.user.focus();
+
+                return false; //ko cho chuyen sang trang action (d05_menu.html)
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
