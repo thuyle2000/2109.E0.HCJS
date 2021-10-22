@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        label{
+            display: inline-block;
+            width: 7rem;
+        }
+        div{
+            margin-top: 0.5rem;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select
+        {
+            width: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>Window Demo</h2>
+    <hr>
+    <h3>Register Form - version 2</h3>
+    <form action="d05_form_login.html" onsubmit="return readData();" >
+        <div>
+            <label for="">user account : </label>
+            <input type="text" name="user" id="user" placeholder="nhap ten tai khoan" required value="bao minh">
+        </div>
+
+        <div>
+            <label for="">password : </label>
+            <input type="password" name="pass" id="pass" required value="1234">
+        </div>
+        
+        <div>
+            <label for=""> gender : </label>
+            <input type="radio" name="gender" id="gender" value="male" checked> Male 
+            <input type="radio" name="gender" id="gender" value="female"> Female
+        </div>
+
+        <div>
+            <label for="">hobbies : </label>
+            <input type="checkbox" name="hobbies_1" id="hobbies" value="da banh" class="abc"> football
+
+            <input type="checkbox" name="hobbies_2" id="hobbies" value="an hang" checked class="abc"> eating-out
+
+            <input type="checkbox" name="hobbies_3" id="hobbies" value="nghe nhac" checked class="abc"> listening-music
+        </div>
+
+        <div>
+            <label for="">City : </label>
+            <select name="city" id="city">
+                <option value="SG">Saigon</option>
+                <option value="HN">Hanoi</option>
+                <option value="CT">Cantho</option>
+                <option value="DN">Danang</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Birthday : </label>
+            <input type="date" name="dob" id="dob" min="1990-01-31" max="2006-12-31" value="2003-04-30">
+        </div>
+
+        <div><label for="">Ranking : </label>
+            <input type="number" id="rank" name="rank" min="1" max="5" value="3">
+        </div>
+
+        <div>
+            <label for="">comments : </label> <br>
+            <textarea name="comment" id="comment" cols="50" rows="5">comment here...</textarea>
+
+        </div>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+       
+    </form>
+
+    <script>
+        //ham doc du lieu nhap tren form dang ky va xuat len man hinh
+        function readData(){
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var gender = document.getElementById("gender").value;
+
+           
+            //lay tat ca cac input type=checkbox co class 'abc'
+            var chkElements = document.getElementsByClassName("abc");
+            var hobbies = [];
+            for (let i = 0; chkElements[i]; i++) {
+                if(chkElements[i].checked){
+                    hobbies.push(chkElements[i].value);
+                }                
+            }
+
+            var city = document.getElementById("city").value;
+
+            var dob = document.getElementById("dob").value;
+            //tinh tuoi 
+            var d_dob = new Date(dob);
+            var d_today = new Date();
+            var age = d_today.getFullYear() - d_dob.getFullYear();
+
+            var a = [];
+            a.push("Your Information");
+            a.push("================");
+            a.push(`User Account: ${user}`);
+            a.push(`Password: ${pass}`);
+            a.push(`Gender: ${gender}`);
+            a.push(`Hobbies: ${hobbies.join(', ')}`);
+            a.push(`City: ${city}`);
+            a.push(`Birthday: ${dob}`);
+            a.push(`Age: ${age}`);
+
+            //open new window-tab in browser
+            var new_win = window.open();
+            new_win.document.write("<pre>");
+            new_win.document.writeln(a.join("\n"));
+            new_win.document.write("</pre>");
+
+            return false; //vo hieu hoa chuc nang chuyen trang action cua nut submit
+
+        } 
+
+        
+
+
+    </script>
+</body>
+</html>
