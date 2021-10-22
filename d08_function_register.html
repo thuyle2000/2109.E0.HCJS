@@ -104,6 +104,11 @@
 
             var city = document.getElementById("city").value;
 
+            var dob = document.getElementById("dob").value;
+            //tinh tuoi 
+            var d_dob = new Date(dob);
+            var d_today = new Date();
+            var age = d_today.getFullYear() - d_dob.getFullYear();
 
             var a = [];
             a.push("Your Information");
@@ -113,6 +118,8 @@
             a.push(`Gender: ${gender}`);
             a.push(`Hobbies: ${hobbies.join(', ')}`);
             a.push(`City: ${city}`);
+            a.push(`Birthday: ${dob}`);
+            a.push(`Age: ${age}`);
 
             alert(a.join("\n"));
 
