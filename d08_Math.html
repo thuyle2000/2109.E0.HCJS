@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            display: inline-block;
+            width: 10rem;
+        }
+
+        div {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>Math Object Demo</h2>
+    <hr>
+    <div>
+        <label for="">Input a number [1-6]</label>
+        <input type="number" name="n1" id="n1" min="1" max="6" value="2">
+    </div>
+    <div>
+        <input type="button" value="Check" id="btnCheck">
+    </div>
+    <div>
+        <textarea name="result" id="result" cols="48" rows="3" readonly></textarea>
+    </div>
+
+    <script>
+        let countWin=0, countLost=0;
+        
+        document.getElementById("btnCheck").onclick= function(){
+            let s = ``;
+
+            let n1=document.getElementById("n1").value;
+            let rNumber = 1 + Math.trunc( Math.random()*10000) %6;
+            if(n1==rNumber){
+                s = `You win !`;
+                countWin++;
+            }
+            else{
+                s = `UnCorrect - the number is ${rNumber} !`; 
+                countLost++;
+            }
+
+            s += `\n => win:${countWin}, loose: ${countLost} !`
+
+            document.getElementById("result").value = s;
+        }
+    </script>
+</body>
+</html>
