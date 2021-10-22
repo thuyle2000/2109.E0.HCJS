@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            display: inline-block;
+            width: 9rem;
+        }
+
+        div {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>String Object Demo</h2>
+    <hr>
+
+    <div>
+        <label for="">Input your text</label>
+        <input type="text" name="s1" id="s1" value="    La   Bao Minh     ">
+    </div>
+
+    <div>
+        <label for="">Input text search</label>
+        <input type="text" name="s2" id="s2" value="a">
+    </div>
+
+    <div>
+        <input type="button" value="Check" id="btnCheck">
+    </div>
+
+    <div>
+        <textarea name="result" id="result" cols="48" rows="10"></textarea>
+    </div>
+
+
+
+    <script>
+        document.getElementById("btnCheck").onclick= function(){
+            var s1 = document.getElementById("s1").value;
+            var s2 = document.getElementById("s2").value;
+
+            var r1 = s1.indexOf(s2);
+            var r2 = s1.lastIndexOf(s2);
+            var r3 = s1.length;
+            var s3 = s1.trim();
+            var s4 = s1.toUpperCase();
+            var s5 = s1.replace("a","i");
+            var s6 = s1.replaceAll("a","i");
+
+            var p = s3.lastIndexOf(' ');
+            var s7 = s3.substr(p);
+
+
+            var a=[];
+            a.push(`s1 = "${s1}" `);
+            a.push(`s2 = "${s2}" `);
+            a.push(`=============`);
+
+            a.push(`s1.length = ${r3}`);
+            a.push(`s1.indexOf(s2) = ${r1}`);
+            a.push(`s1.lastIndexOf(s2) = ${r2}`);
+            a.push(`s1.trim() = "${s3}"`);
+            a.push(`s1.toUpperCase() = "${s4}"`);
+            a.push(`s1.replace("a","i") = "${s5}"`);
+            a.push(`s1.replaceAll("a","i") = "${s6}"`);
+            a.push(`your name = "${s7}"`);
+
+            document.getElementById("result").value = a.join("\n");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
