@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        div {
+            margin-top: 0.5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Location Demo</h2>
+    <hr>
+    <p id="summary"></p>
+    <div>
+        <input type="button" name="btnMath" id="btnMath" value="Math Demo">
+        <input type="button" name="btnString" id="btnString" value="String Demo">
+        <input type="button" name="btnWin" id="btnWin" value="Window Demo">
+    </div>
+
+    <Script>
+        window.onload=function(){
+            var url = location.href;
+            document.getElementById("summary").innerHTML=`Current URL : ${url}`;
+        }
+
+        document.getElementById("btnMath").onclick = function(){
+            location.href = "d08_Math.html";
+        }
+
+        document.getElementById("btnString").onclick = function(){
+            location.href = "d08_string.html";
+        }
+
+        document.getElementById("btnWin").onclick = function(){
+            location.href = "d08_function_register2.html";
+        }
+
+    </Script>
+</body>
+
+</html>
