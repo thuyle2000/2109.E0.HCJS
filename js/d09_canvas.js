@@ -29,6 +29,34 @@ function drawCircle() {
     ctx.arc(280, 200, 40, 0, 2 * Math.PI);
     ctx.fillStyle = "orange";
     ctx.fill();
+}
 
+function drawImage(imgNo) {
+    let img = null;
+    switch (imgNo) {
+        case 1:
+            img = document.getElementById("h1");
+            break;
+        case 2:
+            img = document.getElementById("h2");
+            break;
+        case 3:
+            img = document.getElementById("h3");
+            break;
+    }
+    ctx.beginPath();
+    ctx.drawImage(img, 50, 200, 400, 200);
+
+}
+
+
+function drawText() {
+    ctx.beginPath();
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 10, 50);
+
+    ctx.font = "36px Arial";
+    ctx.strokeStyle="Pink";
+    ctx.strokeText("Hello World", 10, 100);
 
 }

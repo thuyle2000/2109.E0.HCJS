@@ -13,6 +13,13 @@
             background-color: lightcyan;
             border:mediumblue solid medium;
         }
+        img{
+            width: 300px;
+            height: 150px;
+        }
+        img:hover{
+            box-shadow: 3px 3px 3px peru;
+        }
     </style>
 </head>
 
@@ -23,10 +30,17 @@
 
     <input type="button" value="draw Rectangle" id="btnRect" onclick="drawRect();">
 
-    <input type="button" value="draw Circle" id="btnRect" onclick="drawCircle();">
+    <input type="button" value="draw Circle" id="btnCircle" onclick="drawCircle();">
+
+    <input type="button" value="draw Text" id="btnText" onclick="drawText();">
 
     <br><br>
     <canvas width="600" height="400" id="bv"></canvas>
+    <div>
+        <img src="images/noel.png" alt="" id="h1" onmouseenter="drawImage(1)">
+        <img src="images/christ3b.PNG" alt="" id="h2" onmouseenter="drawImage(2)">
+        <img src="images/christ4b.PNG" alt="" id="h3" onmouseenter="drawImage(3)">
+    </div>
 </body>
 
 <script src="js/d09_canvas.js">
