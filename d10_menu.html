@@ -29,6 +29,7 @@
     <div>
         <img src="images/baby.jpg" alt="">
     </div>
+    <p id="profile"></p>
     <h2>My Gallery</h2>
     <p>Our pictures since 2000</p>
     <hr>
@@ -41,6 +42,21 @@
             <td><a href=""></a></td>
         </tr>
     </table>
+
+    <script>
+        //doan code nay se chay sau khi trang web duoc load thanh cong
+        window.onload=function(){
+            //lay du lieu trong bien session storage va hien thi trong doan van ban p co id="profile"
+
+            let uid = sessionStorage.getItem("uid");
+            let pwd = sessionStorage.getItem("pwd");
+            if(uid != null && pwd != null){
+                document.getElementById("profile").innerHTML=`Welcome Mr./Ms ${uid}! <br>Your pass is ${pwd}.`;
+            }
+
+
+        }
+    </script>
 </body>
 
 </html>
