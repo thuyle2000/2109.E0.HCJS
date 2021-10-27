@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drap-drop</title>
+    <style>
+        #d1,
+        #d2 {
+            width: 200px;
+            height: 150px;
+            padding: 0.5rem;
+            margin: 0.1rem;
+            display: inline-block;
+            border: mistyrose solid medium;
+        }
+
+        img {
+            display: block;
+            width: 95%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Drap & Drop Demo</h2>
+    <hr>
+    <div id='d1' ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div id='d2' ondragover="allowDrop(event)" ondrop="drop(event)">
+        <img src="images/baby.jpg" alt="baby" draggable="true" ondragstart="drag(event)" id="sarlavi" title="em la Sar Lavi ne" >
+    </div>
+</body>
+
+<script>
+    function drag(e) {
+        e.dataTransfer.setData("abc", e.target.id);
+    }
+
+    function allowDrop(e) {
+        e.preventDefault();
+    }
+
+    function drop(e) {
+        e.preventDefault();
+        let data = e.dataTransfer.getData("abc");
+        e.target.appendChild(document.getElementById(data));
+    }
+
+</script>
+
+</html>
