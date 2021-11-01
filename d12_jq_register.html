@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sign up Member</h2>
+                <hr>
+
+                <form action="" name="formReg" id="formReg">
+                    <div class="form-group">
+                        <label for="">User name</label>
+                        <input type="text" class="form-control" name="user" id="user" value="aptech"
+                            placeholder="input username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" name="pass" id="pass" value="123" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Password Confirm</label>
+                        <input type="password" class="form-control" name="pass2" id="pass2" value="123" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">City</label>
+                        <select class="form-control" name="city" id="city" required>
+                            <option value="">--- select your city ---</option>
+                            <option value="SG">Saigon</option>
+                            <option value="HU">Hue</option>
+                            <option value="HN">Hanoi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Birthday</label>
+                        <input type="date" class="form-control" name="dob" id="dob" value="2003-11-01"
+                            placeholder="input birthday">
+                    </div>                   
+
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+
+                    <div class="form-group">
+                        <label for="">Summary</label>
+                        <textarea class="form-control" name="summary" id="summary" rows="3" readonly></textarea>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    $("#formReg").submit(function (e) {
+        e.preventDefault();  //vo hieu hoa chuyen trang action
+
+        //lay username
+        let user = $("#user").val();
+
+        //lay password
+        let pass = $("#pass").val();
+
+        //lay password confirm
+        let pass2 = $("#pass2").val();
+
+        if (pass != pass2) {
+            alert(`"Password " and "Password Confirm" not the same !!!`);
+            return;
+        }
+
+        //lay city
+        let city = $("#city").val();
+
+        //lay ngay sinh
+        let dob = $("#dob").val();
+
+
+        let a = ["Your information"];
+        a.push(` user-name: ${user}`);
+        a.push(` password: ${pass}`);
+        a.push(` city: ${city}`);
+        a.push(` birthday : ${dob}`)
+
+        //dua cac thong tin dang ky vo o nhap text-area
+        $("#summary").val(a.join("\n"));
+
+        //xuat thong tin nhap vo hop thong bao alert
+        alert(a.join("\n"));
+
+        //xuat thong tin nhap vo trang web moi
+        let new_win = window.open();
+        new_win.document.writeln(a.join("<br>"));
+        
+    });
+
+
+</script>
+
+</html>
