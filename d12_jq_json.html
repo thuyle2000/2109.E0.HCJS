@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Json Demo</h2>
+        <hr>
+
+        <div id="st">
+
+        </div>
+    </div>
+
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let students =
+            [
+                { "id": "S01", "name": "La Bao Minh", "yob": 2001 },
+                { "id": "S02", "name": "Sar Lavi", "yob": 2003 },
+                { "id": "S03", "name": "Nguyen Toan", "yob": 2000 },
+                { "id": "S04", "name": "Ngoc Huyen", "yob": 2001 },
+                { "id": "S05", "name": "Van Khoa", "yob": 2003 },
+                { "id": "S06", "name": "Duy Truc", "yob": 2003 }
+            ];
+
+        let ds = [];
+        students.forEach(sv => {
+            ds.push(`id = ${sv.id}, name= ${sv.name}, yob= ${sv.yob}`);
+        });
+
+        console.log(ds.join("\n"));
+
+        $("#st").html(ds.join("<br/>"));
+
+    })
+
+
+
+</script>
+
+</html>
