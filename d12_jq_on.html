@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        img {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>on() method - jquery event</h2>
+        <hr>
+        <img src="images/christ1.PNG" alt="" id="hinh">
+    </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#hinh").on({
+
+            mouseenter: function () {
+                console.log("enter");
+                $("#hinh").attr("src","images/christ4b.PNG");
+            },
+            mouseleave: function () {
+                console.log("leave");
+                $("#hinh").attr("src","images/christ1.PNG");
+            } ,
+            click: function(){
+                alert("Noel, Noel ...");              
+            }          
+        });
+    });
+
+
+
+</script>
+
+</html>
